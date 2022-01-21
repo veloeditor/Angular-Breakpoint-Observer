@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { BreakpointObserverDirective } from './directives/breakpoint-observer.directive';
 import { MaterialModule } from './modules/material/material.module';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BreakpointObserverDirective
+    BreakpointObserverDirective,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
