@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  large: any = 'large';
+  medium: any = 'medium';
+  small: any = 'small';
+
   constructor() { }
 
   ngOnInit(): void {

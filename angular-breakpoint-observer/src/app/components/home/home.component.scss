@@ -1,0 +1,24 @@
+.large,
+.medium,
+.small {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  font-size: 3em;
+  text-align: center;
+  height: 100vh;
+}
+
+// .large {
+//   background-color: rgb(172, 172, 172);
+// }
+
+.medium {
+  background-color: rgb(87, 87, 87);
+  color: whitesmoke;
+}
+
+.small {
+  background-color: rgb(45, 45, 45);
+  color: whitesmoke;
+}
