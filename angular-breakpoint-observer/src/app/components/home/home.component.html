@@ -1,1 +1,6 @@
 <app-header></app-header>
+<div class="home-container">
+    <div *appBreakpointObserver="large" class="large">PC</div>
+    <div *appBreakpointObserver="medium" class="medium">Tablet</div>
+    <div *appBreakpointObserver="small" class="small">Small</div>
+</div>
