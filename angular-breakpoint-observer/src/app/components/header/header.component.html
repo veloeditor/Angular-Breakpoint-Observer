@@ -1,1 +1,13 @@
-<p>header works!</p>
+<mat-toolbar color="primary" class="mat-tool">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-icon" aria-label="Header nav menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span>Option 1</span>
+        </button>
+    </mat-menu>
+    <span>Breakpoint Observer</span>
+    <span class="example-spacer"></span>
+    <a>First Link</a>
+</mat-toolbar>
