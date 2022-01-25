@@ -18,22 +18,22 @@ export class BreakpointObserverDirective implements OnDestroy {
 
   @Input("appBreakpointObserver") set size(value: Size) {
     this.subscription.unsubscribe();
-    this.subscription = this.observer
+    this.subscription = this.breakpointObserver
       .observe(config[value])
       .subscribe(this.updateView);
   }
 
   constructor(
-    private observer: BreakpointObserver,
-    private vcRef: ViewContainerRef,
+    private breakpointObserver: BreakpointObserver,
+    private viewContainerRef: ViewContainerRef,
     private templateRef: TemplateRef<any>
   ) { }
 
   updateView = ({ matches }: BreakpointState) => {
-    if (matches && !this.vcRef.length) {
-      this.vcRef.createEmbeddedView(this.templateRef);
-    } else if (!matches && this.vcRef.length) {
-      this.vcRef.clear();
+    if (matches && !this.viewContainerRef.length) {
+      this.viewContainerRef.createEmbeddedView(this.templateRef);
+    } else if (!matches && this.viewContainerRef.length) {
+      this.viewContainerRef.clear();
     }
   }
   ngOnDestroy(): void {
