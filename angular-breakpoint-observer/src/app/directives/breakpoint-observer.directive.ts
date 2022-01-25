@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 type Size = "small" | "large";
 
-const config = {
+const breakpointSizeOptions = {
   small: [Breakpoints.XSmall],
   // medium: [Breakpoints.Small, Breakpoints.Medium],
   large: [Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]
@@ -19,7 +19,7 @@ export class BreakpointObserverDirective implements OnDestroy {
   @Input("appBreakpointObserver") set size(value: Size) {
     this.subscription.unsubscribe();
     this.subscription = this.breakpointObserver
-      .observe(config[value])
+      .observe(breakpointSizeOptions[value])
       .subscribe(this.updateView);
   }
 

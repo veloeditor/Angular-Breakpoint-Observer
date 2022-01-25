@@ -9,6 +9,7 @@ import { BreakpointObserverDirective } from './directives/breakpoint-observer.di
 import { MaterialModule } from './modules/material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderMobileComponent } from './components/header-mobile/header-mobile.
     HomeComponent,
     BreakpointObserverDirective,
     HeaderComponent,
-    HeaderMobileComponent
+    HeaderMobileComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
