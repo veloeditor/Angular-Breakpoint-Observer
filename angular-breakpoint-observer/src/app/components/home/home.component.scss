@@ -4,21 +4,70 @@
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  font-size: 3em;
-  text-align: center;
   height: 100vh;
 }
 
-// .large {
-//   background-color: rgb(172, 172, 172);
-// }
+.large {
+  .card {
+    background-color: rgb(53, 53, 53);
+    border-radius: 8px;
+    color: rgb(238, 237, 237);
+    text-align: center;
+    height: 80px;
+    padding: 1em;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 2.7rem;
+      font-weight: bold;
+    }
+  }
+}
 
 .medium {
   background-color: rgb(87, 87, 87);
   color: whitesmoke;
+
+  .card {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    color: rgb(45, 45, 45);
+    text-align: center;
+    height: 80px;
+    padding: 1em;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 2.7rem;
+      font-weight: bold;
+    }
+  }
 }
 
 .small {
   background-color: rgb(45, 45, 45);
-  color: whitesmoke;
+
+  .card {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    color: rgb(45, 45, 45);
+    text-align: center;
+    height: 80px;
+    padding: 1em;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 2.7rem;
+      font-weight: bold;
+    }
+  }
 }

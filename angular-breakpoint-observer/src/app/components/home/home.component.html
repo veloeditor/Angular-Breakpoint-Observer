@@ -1,5 +1,21 @@
-<app-header></app-header>
+<app-header *appBreakpointObserver="large"></app-header>
+<app-header *appBreakpointObserver="small"></app-header>
 
-<div *appBreakpointObserver="large" class="large">PC</div>
-<div *appBreakpointObserver="medium" class="medium">Tablet</div>
-<div *appBreakpointObserver="small" class="small">Small</div>
+<div *appBreakpointObserver="large" class="large">
+  <div class="card">
+    <h2>What size are we at?</h2>
+    <p>Desktop</p>
+  </div>
+</div>
+<!-- <div *appBreakpointObserver="medium" class="medium">
+  <div class="card">
+    <h2>What size are we at?</h2>
+    <p>Tablet</p>
+  </div>
+</div> -->
+<div *appBreakpointObserver="small" class="small">
+  <div class="card">
+    <h2>What size are we at?</h2>
+    <p>Mobile</p>
+  </div>
+</div>

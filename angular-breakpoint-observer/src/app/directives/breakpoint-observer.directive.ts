@@ -2,12 +2,12 @@ import { Directive, Input, OnDestroy, TemplateRef, ViewContainerRef } from '@ang
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
 
-type Size = "small" | "medium" | "large";
+type Size = "small" | "large";
 
 const config = {
-  small: [Breakpoints.XSmall],
-  medium: [Breakpoints.Small, Breakpoints.Medium],
-  large: [Breakpoints.Large, Breakpoints.XLarge]
+  small: [Breakpoints.XSmall, Breakpoints.Small],
+  // medium: [Breakpoints.Small, Breakpoints.Medium],
+  large: [Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]
 }
 
 @Directive({
