@@ -8,13 +8,15 @@ import { HomeComponent } from './components/home/home.component';
 import { BreakpointObserverDirective } from './directives/breakpoint-observer.directive';
 import { MaterialModule } from './modules/material/material.module';
 import { HeaderComponent } from './components/header/header.component';
+import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BreakpointObserverDirective,
-    HeaderComponent
+    HeaderComponent,
+    HeaderMobileComponent
   ],
   imports: [
     BrowserModule,

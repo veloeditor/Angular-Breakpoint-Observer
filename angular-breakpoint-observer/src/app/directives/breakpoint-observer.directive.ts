@@ -5,9 +5,9 @@ import { Subscription } from 'rxjs';
 type Size = "small" | "large";
 
 const config = {
-  small: [Breakpoints.XSmall, Breakpoints.Small],
+  small: [Breakpoints.XSmall],
   // medium: [Breakpoints.Small, Breakpoints.Medium],
-  large: [Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]
+  large: [Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]
 }
 
 @Directive({
