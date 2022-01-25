@@ -1,21 +1,24 @@
 <app-header *appBreakpointObserver="large"></app-header>
 <app-header-mobile *appBreakpointObserver="small"></app-header-mobile>
+<router-outlet #router="outlet"></router-outlet>
 
-<div *appBreakpointObserver="large" class="large">
-  <div class="card">
-    <h2>What size are we at?</h2>
-    <p>Desktop</p>
+<div class="home-container" *ngIf="!router.isActivated">
+  <div *appBreakpointObserver="large" class="large">
+    <div class="card">
+      <h2>What size are we at?</h2>
+      <p>Desktop</p>
+    </div>
   </div>
-</div>
-<!-- <div *appBreakpointObserver="medium" class="medium">
-  <div class="card">
-    <h2>What size are we at?</h2>
-    <p>Tablet</p>
-  </div>
-</div> -->
-<div *appBreakpointObserver="small" class="small">
-  <div class="card">
-    <h2>What size are we at?</h2>
-    <p>Mobile</p>
+  <!-- <div *appBreakpointObserver="medium" class="medium">
+    <div class="card">
+      <h2>What size are we at?</h2>
+      <p>Tablet</p>
+    </div>
+  </div> -->
+  <div *appBreakpointObserver="small" class="small">
+    <div class="card">
+      <h2>What size are we at?</h2>
+      <p>Mobile</p>
+    </div>
   </div>
 </div>

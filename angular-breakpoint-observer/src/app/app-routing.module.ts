@@ -4,9 +4,13 @@ import { HomeComponent } from './components/home/home.component';
 import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'table', component: TableComponent }
-
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: 'table', component: TableComponent }
+    ]
+  },
 ];
 
 @NgModule({

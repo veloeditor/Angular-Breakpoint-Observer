@@ -1,8 +1,36 @@
 .table-title {
+  padding-top: 15px;
   text-align: center;
   font-weight: 800;
 }
 
 table {
   width: 100%;
+}
+
+.mobile-label {
+  display: none;
+}
+
+// we use media query to set the vertical orientation of the table
+@media (max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .mat-column-position {
+    padding-left: 0px !important;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
 }
