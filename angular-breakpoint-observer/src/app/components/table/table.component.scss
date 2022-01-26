@@ -2,10 +2,29 @@
   padding-top: 15px;
   text-align: center;
   font-weight: 800;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  text-align: center;
+  background-color: rgb(181, 179, 182);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  padding: 0 9px;
+
+  span {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
 }
 
 table {
   width: 100%;
+  background-color: transparent;
 }
 
 .mobile-label {
@@ -14,10 +33,27 @@ table {
 
 // we use media query to set the vertical orientation of the table
 @media (max-width: 600px) {
+  .table-container {
+    background-color: rgb(75, 75, 75);
+  }
+  .table-title {
+    font-size: 1.3rem;
+    color: whitesmoke;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
   .mobile-label {
     width: 80px;
     display: inline-block;
     font-weight: bold;
+    color: whitesmoke;
   }
 
   .mat-column-position {
@@ -32,5 +68,15 @@ table {
     flex-direction: column;
     align-items: start;
     padding: 8px 24px;
+    color: whitesmoke;
+  }
+
+  .mat-cell {
+    color: whitesmoke;
+  }
+
+  .mat-row,
+  .mat-footer-row {
+    min-height: 26px;
   }
 }
