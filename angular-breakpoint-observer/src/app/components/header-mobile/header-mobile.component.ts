@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header-mobile.component.html',
   styleUrls: ['./header-mobile.component.scss']
 })
-export class HeaderMobileComponent implements OnInit {
+export class HeaderMobileComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
