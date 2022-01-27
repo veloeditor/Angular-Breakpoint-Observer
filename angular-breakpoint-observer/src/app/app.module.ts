@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +9,7 @@ import { MaterialModule } from './modules/material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
 import { TableComponent } from './components/table/table.component';
+import { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { TableComponent } from './components/table/table.component';
     BreakpointObserverDirective,
     HeaderComponent,
     HeaderMobileComponent,
-    TableComponent
+    TableComponent,
+    MatStepperComponent
   ],
   imports: [
     BrowserModule,
