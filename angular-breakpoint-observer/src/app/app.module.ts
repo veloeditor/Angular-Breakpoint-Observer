@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeaderMobileComponent } from './components/header-mobile/header-mobile.component';
 import { TableComponent } from './components/table/table.component';
 import { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { MatStepperComponent } from './components/mat-stepper/mat-stepper.compon
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

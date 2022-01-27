@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -16,7 +17,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatButtonModule,
     MatMenuModule,
     MatTableModule,
-    MatStepperModule
+    MatStepperModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -24,7 +26,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatButtonModule,
     MatMenuModule,
     MatTableModule,
-    MatStepperModule
+    MatStepperModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

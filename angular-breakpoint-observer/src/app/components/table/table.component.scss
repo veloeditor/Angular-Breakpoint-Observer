@@ -2,7 +2,7 @@
   padding-top: 15px;
   text-align: center;
   font-weight: 800;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
   margin-bottom: 0px;
 }
 
@@ -33,7 +33,7 @@ table {
 
 // we use media query to set the vertical orientation of the table
 @media (max-width: 600px) {
-  .table-container {
+  .wrapper-container {
     background-color: rgb(75, 75, 75);
   }
   .table-title {
