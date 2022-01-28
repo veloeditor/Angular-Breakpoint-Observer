@@ -11,6 +11,7 @@ import { HeaderMobileComponent } from './components/header-mobile/header-mobile.
 import { TableComponent } from './components/table/table.component';
 import { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     HeaderMobileComponent,
     TableComponent,
-    MatStepperComponent
+    MatStepperComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
