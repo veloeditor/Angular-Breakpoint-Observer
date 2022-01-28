@@ -7,6 +7,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [],
@@ -18,7 +21,9 @@ import { MatInputModule } from '@angular/material/input';
     MatMenuModule,
     MatTableModule,
     MatStepperModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     MatToolbarModule,
@@ -27,7 +32,9 @@ import { MatInputModule } from '@angular/material/input';
     MatMenuModule,
     MatTableModule,
     MatStepperModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }
