@@ -11,13 +11,14 @@ export class HomeComponent implements OnInit {
   large: any = 'large';
   medium: any = 'medium';
   small: any = 'small';
+  isMobile: boolean = false;
 
   constructor(private breakpointObserverService: BreakpointObserverService) { }
 
   ngOnInit(): void {
     // once per component initiation. this will not dynamically check with each breakpoint change as currently setup
-    const isMobile = this.breakpointObserverService.checkBreakpointState();
-    console.log('isMobile:', isMobile);
+    this.isMobile = this.breakpointObserverService.getBreakpointState();
+    console.log('isMobile:', this.isMobile);
   }
 
 }

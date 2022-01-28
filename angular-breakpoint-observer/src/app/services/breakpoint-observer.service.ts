@@ -8,7 +8,7 @@ export class BreakpointObserverService {
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
-  checkBreakpointState(): boolean {
+  getBreakpointState(): boolean {
     let isMobile: boolean = false;
     this.breakpointObserver.observe('(max-width: 600px)').subscribe(result => {
       return isMobile = result.matches;
