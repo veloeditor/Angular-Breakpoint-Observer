@@ -12,6 +12,7 @@ import { TableComponent } from './components/table/table.component';
 import { MatStepperComponent } from './components/mat-stepper/mat-stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ServiceExampleComponent } from './components/service-example/service-example.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HeaderMobileComponent,
     TableComponent,
     MatStepperComponent,
-    SidenavComponent
+    SidenavComponent,
+    ServiceExampleComponent
   ],
   imports: [
     BrowserModule,
