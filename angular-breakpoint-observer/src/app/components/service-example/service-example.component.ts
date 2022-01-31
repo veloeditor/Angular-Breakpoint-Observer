@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { BreakpointObserverService } from 'src/app/services/breakpoint-observer.service';
 
 @Component({
@@ -7,6 +7,12 @@ import { BreakpointObserverService } from 'src/app/services/breakpoint-observer.
   styleUrls: ['./service-example.component.scss']
 })
 export class ServiceExampleComponent implements OnInit {
+  // the following code when not commented out will dynamically call the service everytime innerWidth changes
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: { target: { innerWidth: any; }; }) {
+  //   event.target.innerWidth;
+  //   this.isMobile = this.breakpointObserverService.getBreakpointState();
+  // }
   isMobile: boolean = false;
 
   constructor(private breakpointObserverService: BreakpointObserverService) { }

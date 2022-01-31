@@ -25,9 +25,11 @@ export class SidenavComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
-    this.breakpointObserver.observe(['(max-width: 600px)']).subscribe(result => {
-      this.isMobile = result.matches;
-    });
+    // here isMatched() is used to show a one-time check of breakpoint at component initiation
+    // this.breakpointObserver.observe(['(max-width: 600px)']).subscribe(result => {
+    //   this.isMobile = result.matches;
+    // });
+    this.isMobile = this.breakpointObserver.isMatched('(max-width: 600px)');
   }
 
 }
