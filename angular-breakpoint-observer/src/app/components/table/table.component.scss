@@ -23,7 +23,9 @@
 }
 
 table {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: transparent;
 }
 
@@ -33,9 +35,6 @@ table {
 
 // we use media query to set the vertical orientation of the table
 @media (max-width: 600px) {
-  .wrapper-container {
-    background-color: rgb(75, 75, 75);
-  }
   .table-title {
     font-size: 1.3rem;
     color: whitesmoke;

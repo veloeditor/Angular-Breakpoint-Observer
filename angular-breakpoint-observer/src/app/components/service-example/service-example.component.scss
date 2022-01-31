@@ -1,0 +1,38 @@
+.table-title {
+  padding-top: 15px;
+  text-align: center;
+  font-weight: 800;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  background-color: rgb(181, 179, 182);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  padding: 0 9px;
+
+  span {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-title {
+    font-size: 1.3rem;
+    color: whitesmoke;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
