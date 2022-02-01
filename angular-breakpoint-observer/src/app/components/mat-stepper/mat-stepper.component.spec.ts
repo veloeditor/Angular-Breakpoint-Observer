@@ -42,6 +42,13 @@ describe('MatStepperComponent', () => {
       component.ngOnInit();
       expect(component.isMobile).toBeTrue();
     });
+
+    it('', () => {
+      const value = { matches: true, breakpoints: { '(max-width: 600px)': true } };
+      spyOn(breakPointObserverMock, 'observe').and.returnValue(of(value));
+      component.ngOnInit();
+      // breakPointObserverMock.observe('(max-width: 600px)').pipe(map())
+    });
   });
 
 });
