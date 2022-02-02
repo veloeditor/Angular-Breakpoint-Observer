@@ -1,4 +1,4 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { fakeAsync, TestBed } from '@angular/core/testing';
 import { FormBuilder } from '@angular/forms';
 import { StepperOrientation } from '@angular/material/stepper';
@@ -44,10 +44,10 @@ describe('MatStepperComponent', () => {
     });
 
     it('', () => {
-      const value = { matches: true, breakpoints: { '(max-width: 600px)': true } };
-      spyOn(breakPointObserverMock, 'observe').and.returnValue(of(value));
+      const value = { value: '(max-width: 600px)' as unknown as BreakpointState, index: 0 };
+      // spyOn(breakPointObserverMock, 'observe').and.returnValue(of(value));
       component.ngOnInit();
-      // breakPointObserverMock.observe('(max-width: 600px)').pipe(map())
+      breakPointObserverMock.observe('(max-width: 600px)').pipe(map(({ matches }) => expect(matches).toBeTrue()));
     });
   });
 
