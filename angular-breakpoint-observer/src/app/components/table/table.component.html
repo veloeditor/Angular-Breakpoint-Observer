@@ -3,45 +3,67 @@
   <h4 class="subtitle">
     We are currently in <span>{{ isMobile ? "mobile" : "desktop" }}</span> view
   </h4>
+  <div class="table" *ngIf="dataSource.data.length > 0; else loading">
+    <table mat-table [dataSource]="dataSource">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name" class="position-col">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Name:</span>
+          {{ user.name }}
+        </mat-cell>
+      </ng-container>
 
-  <table mat-table [dataSource]="dataSource">
-    <!-- Position Column -->
-    <ng-container matColumnDef="position" class="position-col">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <span class="mobile-label">Position:</span>
-        {{ element.position }}
-      </mat-cell>
-    </ng-container>
+      <!-- Username Column -->
+      <ng-container matColumnDef="username">
+        <mat-header-cell *matHeaderCellDef> Username </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Username:</span>
+          {{ user.username }}
+        </mat-cell>
+      </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <span class="mobile-label">Name:</span>
-        {{ element.name }}
-      </mat-cell>
-    </ng-container>
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Email:</span>
+          {{ user.email }}
+        </mat-cell>
+      </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <span class="mobile-label">Weight:</span>
-        {{ element.weight }}
-      </mat-cell>
-    </ng-container>
+      <!-- Phone Column -->
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Phone:</span>
+          {{ user.phone }}
+        </mat-cell>
+      </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <span class="mobile-label">Symbol:</span>
-        {{ element.symbol }}
-      </mat-cell>
-    </ng-container>
+      <!-- Website Column -->
+      <ng-container matColumnDef="website">
+        <mat-header-cell *matHeaderCellDef> Website </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Website:</span>
+          {{ user.website }}
+        </mat-cell>
+      </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-  </table>
+      <!-- Address Column -->
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+        <mat-cell *matCellDef="let user">
+          <span class="mobile-label">Address:</span>
+          {{ user.address.city }} {{ user.address.zipcode }}
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </table>
+  </div>
+  <ng-template #loading
+    ><span class="loading-text">Loading data...</span>
+  </ng-template>
 </div>

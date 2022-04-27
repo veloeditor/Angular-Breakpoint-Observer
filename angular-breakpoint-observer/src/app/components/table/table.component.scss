@@ -33,6 +33,19 @@ table {
   display: none;
 }
 
+.mat-column-website,
+.mat-column-username {
+  flex: 0 1 13%;
+}
+
+.loading-text {
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
 // we use media query to set the vertical orientation of the table
 @media (max-width: 600px) {
   .table-title {
@@ -72,6 +85,7 @@ table {
 
   .mat-cell {
     color: whitesmoke;
+    padding-left: 0px !important;
   }
 
   .mat-row,

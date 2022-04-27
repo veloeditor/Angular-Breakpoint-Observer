@@ -6,9 +6,8 @@ type Size = "small" | "large";
 
 const breakpointSizeOptions = {
   small: [Breakpoints.XSmall],
-  // medium: [Breakpoints.Small, Breakpoints.Medium],
   large: [Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge]
-}
+};
 
 @Directive({
   selector: '[appBreakpointObserver]'
@@ -35,7 +34,7 @@ export class BreakpointObserverDirective implements OnDestroy {
     } else if (!matches && this.viewContainerRef.length) {
       this.viewContainerRef.clear();
     }
-  }
+  };
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

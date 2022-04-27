@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   large: any = 'large';
-  medium: any = 'medium';
   small: any = 'small';
-  isMobile: boolean = false;
 
   constructor() { }
 

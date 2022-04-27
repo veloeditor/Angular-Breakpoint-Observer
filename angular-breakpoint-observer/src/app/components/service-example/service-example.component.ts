@@ -10,7 +10,8 @@ export class ServiceExampleComponent implements OnInit {
   // the following code when not commented out will dynamically call the service everytime innerWidth changes
   // @HostListener('window:resize', ['$event'])
   // onResize(event: { target: { innerWidth: any; }; }) {
-  //   event.target.innerWidth;
+  //   event.target.innerWidth = 'max-width: 600px';
+  //   console.log('Resizing');
   //   this.isMobile = this.breakpointObserverService.getBreakpointState();
   // }
   isMobile: boolean = false;
